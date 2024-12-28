@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# RUN translate_env to fix environemt variables
+pushd config/ > /dev/null
+./translate_env.sh
+popd > /dev/null
+
+if command -v docker &> /dev/null; then
+    UID=${UID} GID=${GID} docker compose up -d
+elif command -v podman &> /dev/null; then
+    UID=${UID} GID=${GID} podman compose up -d
+else
+    echo "A known container runtime is not available"
+fi

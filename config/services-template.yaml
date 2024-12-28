@@ -1,0 +1,217 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/configs/services/
+
+# ==============================================================================
+- My Network:
+    - Speedport:
+        description: ISP router - 192.168.1.1 
+        icon: router.png
+        ping: 192.168.1.1
+    - Home Mikrotik:
+        description: Home Gateway - 192.168.0.1
+        icon: mikrotik.png
+        ping: 192.168.0.1
+    - Desk Mikrotik:
+        description: Desk Gateway (Homelab) - 192.168.10.1
+        icon: mikrotik.png
+        ping: 192.168.10.1
+        widget:
+            type: mikrotik
+            url: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_URL}}
+            username: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_USERNAME}}
+            password: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_PASSWORD}}
+    - Home Lights:
+        icon: mdi-led-on-#ffffff
+        description: 192.168.0.160
+        href: http://192.168.0.160/home
+    - NUC:
+        icon: si-intel-#ffffff
+        description: {{HOMEPAGE_VAR_NUC_PING}}
+        ping: {{HOMEPAGE_VAR_NUC_PING}}
+        href: {{HOMEPAGE_VAR_NUC_HREF}}
+    - RASPI:
+        icon: raspberrypi.png
+        ping: {{HOMEPAGE_VAR_PASPI_PING}}
+        description: {{HOMEPAGE_VAR_PASPI_PING}}
+        href: {{HOMEPAGE_VAR_RASPI_HREF}}
+    - JETSON:
+        icon: si-nvidia-#ffffff
+        ping: {{HOMEPAGE_VAR_JETSON_PING}}
+        description: {{HOMEPAGE_VAR_JETSON_PING}}
+        href: {{HOMEPAGE_VAR_JETSON_HREF}}
+
+# ==============================================================================
+
+- Homelab:
+    - Homeassistant:
+        description: Home Network
+        icon: home-assistant-alt.svg
+        ping: {{HOMEPAGE_VAR_HOMEASSISTANT_PING}}
+        # widget:
+        #     type: homeassistant
+        #     url: http://homeassistant.host.or.ip:port
+        #     key: access_token
+        # custom:
+        #     - state: sensor.total_power
+        #     - state: sensor.total_energy_today
+        #     label: energy today
+        #     - template: "{{ states.switch|selectattr('state','equalto','on')|list|length }}"
+        #     label: switches on
+        #     - state: weather.forecast_home
+        #     label: wind speed
+        #     value: "{attributes.wind_speed} {attributes.wind_speed_unit}"
+    - Proxmox:
+        description: {{HOMEPAGE_VAR_PROXMOX_PING}} - (VMs {{HOMEPAGE_VAR_PROXMOX_VM_RANGE}})
+        icon: proxmox.png
+        ping: {{HOMEPAGE_VAR_PROXMOX_PING}}
+        href: {{HOMEPAGE_VAR_PROXMOX_HREF}}
+        widget:
+            type: proxmox
+            url: {{HOMEPAGE_VAR_PROXMOX_WIDGET_URL}}
+            username: {{HOMEPAGE_VAR_PROXMOX_WIDGET_USERNAME}}
+            password: {{HOMEPAGE_VAR_PROXMOX_WIDGET_PASSWORD}}
+            node: proxmox-msi
+    - TrueNAS:
+        href: {{HOMEPAGE_VAR_TRUENAS_HREF}}
+        icon: https://www.svgrepo.com/show/331613/truenas.svg
+        ping: {{HOMEPAGE_VAR_TRUENAS_PING}}
+        description: {{HOMEPAGE_VAR_TRUENAS_PING}}
+        widget:
+            type: truenas
+            url: {{HOMEPAGE_VAR_TRUENAS_HREF}}
+            key: {{HOMEPAGE_VAR_TRUENAS_WIDGET_KEY}}
+            enablePools: true   # optional, defaults to false
+            nasType: scale      # defaults to scale, must be set to 'core' if using enablePools with TrueNAS Core
+    - Portainer:
+        description: Via Proxmox - {{HOMEPAGE_VAR_PORTAINER_PING}}
+        href: {{HOMEPAGE_VAR_PORTAINER_HREF}}
+        icon: portainer.png
+        ping: {{HOMEPAGE_VAR_PORTAINER_PING}}
+        widget:
+            type: portainer
+            url: {{HOMEPAGE_VAR_PORTAINER_HREF}}
+            env: 2
+            key: {{HOMEPAGE_VAR_PORTAINER_WIDGET_KEY}}
+    - Nginx-proxy-manager:
+        href: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_HREF}}
+        description: Via Proxmox - {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_IP}} | Sites - {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_URL}}
+        icon: nginx-proxy-manager.png
+        siteMonitor: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_SITEMONITOR}}
+        widget:
+            type: npm
+            url: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_HREF}}
+            username: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_USERNAME}}
+            password: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_PASSWORD}}  
+
+# ==============================================================================
+
+- Services:
+    - Jellyfin:
+        # 0. IF YOU USE TRUENAS:
+        #   a) When creating app, use USERID & GROUPID of your user
+        #   b) Use Additional storage:
+        #       Mount point same as Host path configuration (Create a shared dir)
+        href: {{HOMEPAGE_VAR_JELLYFIN_HREF}}
+        icon: jellyfin.png
+        description: Via Truenas - {{HOMEPAGE_VAR_JELLYFIN_IP}}
+        siteMonitor: {{HOMEPAGE_VAR_JELLYFIN_SITEMONITOR}}
+        widget:
+            type: jellyfin
+            url: {{HOMEPAGE_VAR_JELLYFIN_WIDGET_URL}}
+            key: {{HOMEPAGE_VAR_JELLYFIN_WIDGET_KEY}}
+            enableBlocks: true              # optional, defaults to false
+            enableNowPlaying: true          # optional, defaults to true
+            enableUser: true                # optional, defaults to false
+            showEpisodeNumber: true         # optional, defaults to false
+            expandOneStreamToTwoRows: false # optional, defaults to true
+    - Nextcloud:
+        # 0. IF YOU USE TRUENAS:
+        #   Admin User: nextcloud
+        #   Admin password:
+        #   Host: {{HOMEPAGE_VAR_NEXTCLOUD_IP}}
+        #   Max upload size: 10
+        #   Host Path Configuration: configure to your local shared dir (need to have your user privileges)
+        href: {{HOMEPAGE_VAR_NEXTCLOUD_HREF}}
+        description: Via Truenas - {{HOMEPAGE_VAR_NEXTCLOUD_IP}}
+        icon: nextcloud.png
+        siteMonitor: {{HOMEPAGE_VAR_NEXTCLOUD_SITEMONITOR}}
+        # widget:
+        #     type: nextcloud
+        #     url: {{HOMEPAGE_VAR_NEXTCLOUD_WIDGET_URL}}
+        #     key: {{HOMEPAGE_VAR_NEXTCLOUD_WIDGET_TOKEN}}
+    - Gitea:
+        # 0. IF YOU USE TRUENAS:
+        #   To work this properly, need to add 3 shared dirs
+        #   a) data [apps:apps], b) db [NOT TESTED], c) config [apps:apps]
+        #   1. Set Root URL as: http://desk-truenas.duckdns.org
+        description: Via Truenas - {{HOMEPAGE_VAR_GITEA_IP}} | Port - {{HOMEPAGE_VAR_GITEA_PORT}}
+        icon: gitea.png
+        siteMonitor: {{HOMEPAGE_VAR_GITEA_SITEMONITOR}}
+        href: {{HOMEPAGE_VAR_GITEA_HREF}}
+    - Registry:
+        # 0. IF YOU USE TRUENAS:
+        #   To work this properly, need to add 
+        #   a. When creating app, use USERID & GROUPID of your user
+        #   b. CLIENR - edit: sudo vim /etc/docker/daemon.json
+        #         "insecure-registries":["desk-truenas.duckdns.org:30095"]
+        #   c. sudo systemctl restart docker.service
+        description: Via Truenas - {{HOMEPAGE_VAR_REGISTRY_IP}} | Registry - {{HOMEPAGE_VAR_REGISTRY_URL}}
+        icon: https://avatars.githubusercontent.com/u/78096003?v=4
+        ping: {{HOMEPAGE_VAR_REGISTRY_PING}}
+    - MeTube:
+        href: {{HOMEPAGE_VAR_METUBE_HREF}}
+        icon: metube.png
+        description: Via Truenas - {{HOMEPAGE_VAR_METUBE_IP}}
+        siteMonitor: {{HOMEPAGE_VAR_METUBE_SITEMONITOR}}
+    - Pi-hole:
+        href: {{HOMEPAGE_VAR_PIHOLE_HREF}}
+        icon: pi-hole.png
+        widget:
+            type: pihole
+            url: {{HOMEPAGE_VAR_PIHOLE_WIDGET_URL}}
+            version: 5 # required if running v6 or higher, defaults to 5
+            key: {{HOMEPAGE_VAR_PIHOLE_WIDGET_KEY}} # optional, in v6 can be your password or app password
+
+# ==============================================================================
+
+- Everyday:
+    - Calendar:
+        href: https://calendar.google.com/
+        widget:
+            type: calendar
+            firstDayInWeek: sunday      # optional - defaults to monday
+            view: monthly               # optional - possible values monthly, agenda
+            maxEvents: 10               # optional - defaults to 10
+            showTime: true              # optional - show time for event happening today - defaults to false
+            timezone: Europe/Athens     # optional and only when timezone is not detected properly (slightly slower performance) - force timezone for ical events (if it's the same - no change, if missing or different in ical - will be converted to this timezone)
+            integrations:
+                - type: ical
+                  name: {{HOMEPAGE_VAR_CALENDAR_ICAL_1_NAME}}
+                  color: yellow
+                  url: {{HOMEPAGE_VAR_CALENDAR_ICAL_1_URL}}
+                  params:           # optional - additional params for the service
+                    showName: true  # optional - show name before event title in event line - defaults to false
+                - type: ical
+                  name: {{HOMEPAGE_VAR_CALENDAR_ICAL_2_NAME}}
+                  color: green
+                  url: {{HOMEPAGE_VAR_CALENDAR_ICAL_2_URL}}
+                  params:           # optional - additional params for the service
+                    showName: true  # optional - show name before event title in event line - defaults to false
+    - Open WebUI:
+        href: http://localhost:3000/
+        icon: open-webui.
+        siteMonitor: http://localhost:3000/
+        description: Local - this device 
+    - Portainer:
+        href: http://localhost:9000/
+        icon: portainer.png
+        siteMonitor: http://localhost:9000
+        description: Local - this device 
+        # widget:
+        #     type: portainer
+        #     url: http://localhost:9000
+        #     env: 2
+        #     key: ptr_6clZkvYTZ9ue/j/g7Jr2Xdsui3dW9hRN/Gqiix6Ldwg=
+
+# ==============================================================================

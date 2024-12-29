@@ -19,25 +19,30 @@ if [[ ! -f "$INPUT_FILE" ]]; then
   exit 1
 fi
 
-# Load environment variables from the .env file
-set -a
-source "$ENV_FILE"
-set +a
-
 # Copy the input file to the output file
 cp "$INPUT_FILE" "$OUTPUT_FILE"
 
 # Perform substitutions
 while IFS='=' read -r key value; do
   # Remove surrounding quotes if they exist
-  value=$(echo "$value" | sed 's/^\"//;s/\"$//')
+  value=$(echo "${value}" | sed 's/^\"//;s/\"$//')
 
-  if [[ "$key" =~ ^HOMEPAGE_VAR_ ]]; then
+  if [[ "${key}" =~ ^HOMEPAGE_VAR_ ]]; then
     placeholder="{{${key}}}"
+
+    # echo "${placeholder} -> ${value}"
+
     # Replace all occurrences of the placeholder with the value in the output file
-    sed -i "s|$placeholder|$value|g" "$OUTPUT_FILE"
+    OS=$(uname -s)
+    if [[ "$OS" == "Linux" ]]; then
+        sed -i "s|${placeholder}|${value}|g" "$OUTPUT_FILE"
+    elif [[ "$OS" == "Darwin" ]]; then
+        sed -i '' "s|${placeholder}|${value}|g" "$OUTPUT_FILE"
+    else
+        echo "Unknown Operating System"
+    fi
   fi
-done < "$ENV_FILE"
+done < "${ENV_FILE}"
 
 # Inform the user
 echo "Substitutions complete. Output written to $OUTPUT_FILE."

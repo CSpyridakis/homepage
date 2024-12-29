@@ -106,6 +106,14 @@
 # ==============================================================================
 
 - Services:
+    - Photoprism:
+        href: {{HOMEPAGE_VAR_PHOTOPRISM_HREF}}
+        icon: photoprism.png
+        siteMonitor: {{HOMEPAGE_VAR_PHOTOPRISM_SITEMONITOR}}
+        widget:
+            type: photoprism
+            url: {{HOMEPAGE_VAR_PHOTOPRISM_WIDGET_URL}}
+            key: {{HOMEPAGE_VAR_PHOTOPRISM_WIDGET_TOKEN}}
     - Jellyfin:
         # 0. IF YOU USE TRUENAS:
         #   a) When creating app, use USERID & GROUPID of your user

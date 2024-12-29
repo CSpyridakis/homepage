@@ -40,10 +40,6 @@
         ping: {{HOMEPAGE_VAR_JETSON_PING}}
         description: {{HOMEPAGE_VAR_JETSON_PING}}
         href: {{HOMEPAGE_VAR_JETSON_HREF}}
-
-# ==============================================================================
-
-- Homelab:
     - Homeassistant:
         description: Home Network
         icon: home-assistant-alt.svg
@@ -61,6 +57,9 @@
         #     - state: weather.forecast_home
         #     label: wind speed
         #     value: "{attributes.wind_speed} {attributes.wind_speed_unit}"
+# ==============================================================================
+
+- Homelab:
     - Proxmox:
         description: {{HOMEPAGE_VAR_PROXMOX_PING}} - (VMs {{HOMEPAGE_VAR_PROXMOX_VM_RANGE}})
         icon: proxmox.png
@@ -198,20 +197,30 @@
                   url: {{HOMEPAGE_VAR_CALENDAR_ICAL_2_URL}}
                   params:           # optional - additional params for the service
                     showName: true  # optional - show name before event title in event line - defaults to false
+    - Agenda:
+        href: https://calendar.google.com/calendar/u/1/r
+        widget:
+            type: calendar
+            view: agenda               # optional - possible values monthly, agenda
+            maxEvents: 4               # optional - defaults to 10slower performance) - force timezone for ical 
+            integrations:
+                - type: ical
+                  name: {{HOMEPAGE_VAR_CALENDAR_ICAL_1_NAME}}
+                  color: yellow
+                  url: {{HOMEPAGE_VAR_CALENDAR_ICAL_1_URL}}
+                  params:           # optional - additional params for the service
+                    showName: true  # optional - show name before event title in event line - defaults to false
+                - type: ical
+                  name: {{HOMEPAGE_VAR_CALENDAR_ICAL_2_NAME}}
+                  color: green
+                  url: {{HOMEPAGE_VAR_CALENDAR_ICAL_2_URL}}
+                  params:           # optional - additional params for the service
+                    showName: true  # optional - show name before event title in event line - defaults to false
     - Open WebUI:
         href: http://localhost:3000/
         icon: open-webui.
         siteMonitor: http://localhost:3000/
         description: Local - this device 
-    - Portainer:
-        href: http://localhost:9000/
-        icon: portainer.png
-        siteMonitor: http://localhost:9000
-        description: Local - this device 
-        # widget:
-        #     type: portainer
-        #     url: http://localhost:9000
-        #     env: 2
-        #     key: ptr_6clZkvYTZ9ue/j/g7Jr2Xdsui3dW9hRN/Gqiix6Ldwg=
+
 
 # ==============================================================================

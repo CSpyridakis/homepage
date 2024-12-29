@@ -19,10 +19,6 @@
     - abbr:
       href: https://stackoverflow.com/
       icon: https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Stack_Overflow_icon.svg/2048px-Stack_Overflow_icon.svg.png
-  - Homepage:
-    - abbr: 
-      href: https://gethomepage.dev/
-      icon: homepage.png
   - Homepage-icons:
     - abbr:
       href: https://github.com/walkxcode/dashboard-icons/tree/main/png

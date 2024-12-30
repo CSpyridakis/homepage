@@ -102,7 +102,11 @@
             url: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_HREF}}
             username: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_USERNAME}}
             password: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_PASSWORD}}  
-
+    - Open WebUI:
+        href: https://open-webui.desk-portainer.duckdns.org/
+        icon: open-webui.png
+        siteMonitor: https://open-webui.desk-portainer.duckdns.org/
+        description: Via Proxmox
 # ==============================================================================
 
 - Services:

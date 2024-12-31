@@ -41,22 +41,15 @@
         description: {{HOMEPAGE_VAR_JETSON_PING}}
         href: {{HOMEPAGE_VAR_JETSON_HREF}}
     - Homeassistant:
-        description: Home Network
+        description: Home Network - {{HOMEPAGE_VAR_HOMEASSISTANT_IP}}
         icon: home-assistant-alt.svg
-        ping: {{HOMEPAGE_VAR_HOMEASSISTANT_PING}}
-        # widget:
-        #     type: homeassistant
-        #     url: http://homeassistant.host.or.ip:port
-        #     key: access_token
-        # custom:
-        #     - state: sensor.total_power
-        #     - state: sensor.total_energy_today
-        #     label: energy today
-        #     - template: "{{ states.switch|selectattr('state','equalto','on')|list|length }}"
-        #     label: switches on
-        #     - state: weather.forecast_home
-        #     label: wind speed
-        #     value: "{attributes.wind_speed} {attributes.wind_speed_unit}"
+        siteMonitor: {{HOMEPAGE_VAR_HOMEASSISTANT_SITEMONITOR}}
+        href: {{HOMEPAGE_VAR_HOMEASSISTANT_HREF}}
+        widget:
+            type: homeassistant
+            url: {{HOMEPAGE_VAR_HOMEASSISTANT_HREF}}
+            key: {{HOMEPAGE_VAR_HOMEASSISTANT_WIDGET_TOKEN}}
+            
 # ==============================================================================
 
 - Homelab:

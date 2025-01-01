@@ -76,7 +76,7 @@
             enablePools: true   # optional, defaults to false
             nasType: scale      # defaults to scale, must be set to 'core' if using enablePools with TrueNAS Core
     - Portainer:
-        description: Via Proxmox - {{HOMEPAGE_VAR_PORTAINER_PING}}
+        description: {{HOMEPAGE_VAR_PORTAINER_PING}} - Via Proxmox
         href: {{HOMEPAGE_VAR_PORTAINER_HREF}}
         icon: portainer.png
         ping: {{HOMEPAGE_VAR_PORTAINER_PING}}
@@ -87,7 +87,7 @@
             key: {{HOMEPAGE_VAR_PORTAINER_WIDGET_KEY}}
     - Nginx-proxy-manager:
         href: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_HREF}}
-        description: Via Proxmox - {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_IP}} | Sites - {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_URL}}
+        description: Via Portainer | Sites - {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_URL}}
         icon: nginx-proxy-manager.png
         siteMonitor: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_SITEMONITOR}}
         widget:
@@ -107,6 +107,7 @@
         href: {{HOMEPAGE_VAR_PHOTOPRISM_HREF}}
         icon: photoprism.png
         siteMonitor: {{HOMEPAGE_VAR_PHOTOPRISM_SITEMONITOR}}
+        description: Via Truenas - {{HOMEPAGE_VAR_GITEA_IP}}
         widget:
             type: photoprism
             url: {{HOMEPAGE_VAR_PHOTOPRISM_WIDGET_URL}}
@@ -149,7 +150,7 @@
         #   To work this properly, need to add 3 shared dirs
         #   a) data [apps:apps], b) db [NOT TESTED], c) config [apps:apps]
         #   1. Set Root URL as: http://desk-truenas.duckdns.org
-        description: Via Truenas - {{HOMEPAGE_VAR_GITEA_IP}} | Port - {{HOMEPAGE_VAR_GITEA_PORT}}
+        description: Via Truenas - {{HOMEPAGE_VAR_GITEA_IP}}
         icon: gitea.png
         siteMonitor: {{HOMEPAGE_VAR_GITEA_SITEMONITOR}}
         href: {{HOMEPAGE_VAR_GITEA_HREF}}
@@ -160,7 +161,7 @@
         #   b. CLIENR - edit: sudo vim /etc/docker/daemon.json
         #         "insecure-registries":["desk-truenas.duckdns.org:30095"]
         #   c. sudo systemctl restart docker.service
-        description: Via Truenas - {{HOMEPAGE_VAR_REGISTRY_IP}} | Registry - {{HOMEPAGE_VAR_REGISTRY_URL}}
+        description: Via Truenas | Registry {{HOMEPAGE_VAR_REGISTRY_URL}}
         icon: https://avatars.githubusercontent.com/u/78096003?v=4
         ping: {{HOMEPAGE_VAR_REGISTRY_PING}}
     - MeTube:

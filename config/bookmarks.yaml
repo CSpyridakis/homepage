@@ -15,6 +15,14 @@
     - abbr:
       href: https://chatgpt.com/
       icon: chatgpt.png
+  - Claude:
+    - abbr:
+      href: https://claude.ai
+      icon: claude-ai.png
+  - Dockerhub:
+    - abbr:
+      href: https://hub.docker.com/
+      icon: docker.png
   - Stackoverflow:
     - abbr:
       href: https://stackoverflow.com/
@@ -28,35 +36,43 @@
       href: http://desk-truenas.duckdns.org:30054/
       icon: homepage.png
 
-- Entertainment:
-  - YouTube:
+- Work: 
+  - Paypal:
     - abbr:
-      href: https://youtube.com/
-      icon: youtube.png
-  - Netflix:
+      href: https://www.paypal.com/
+      icon: https://cdn-icons-png.flaticon.com/512/2504/2504802.png
+  - Monday:
+    - abbr: 
+      href: https://monday.com
+      icon: https://marketing.wearedrew.co/hubfs/logomonday.com_.png?width=500&height=auto&name=image.png
+  - Udemy:
     - abbr:
-      href: https://netflix.com
-      icon: netflix.png
-  - Y-Music:
+      href: https://www.udemy.com
+      icon: udemy.png
+  - AWS:
+    - abbr: 
+      href: https://aws.amazon.com
+      icon: aws.svg
+  - Proxmox helper scripts:
+    - abbr: 
+      href: https://community-scripts.github.io/ProxmoxVE/scripts
+      icon: https://community-scripts.github.io/ProxmoxVE/logo.png
+  - NameCheap:
     - abbr:
-      href: https://music.youtube.com/
-      icon: youtube-music.png
-  - Spotify:
+      href: https://www.namecheap.com/
+      icon: https://static-00.iconduck.com/assets.00/namecheap-icon-2048x2048-ft2h6a21.png
+  - DuckDNS:
     - abbr:
-      href: https://open.spotify.com
-      icon: spotify.png
-  - Skroutz:
+      href: https://www.duckdns.org/
+      icon: https://c10.patreonusercontent.com/4/patreon-media/p/campaign/351251/f88f5d4bc3434344b925b9d62e4dcd49/eyJ3IjoxOTIwLCJ3ZSI6MX0%3D/1.png?token-time=1735948800&token-hash=hU5K48eoCUot7Od0iH4J1vHDqlYfXMt5IOTlIKP-IqI%3D
+  - No-IP:
     - abbr:
-      href: https://www.skroutz.gr/
-      icon: https://play-lh.googleusercontent.com/NINIMeezs4kFXbmKMoW3L2GYqC_kwBgho98V-t4Mr_PVQKCtXagrt04QIf26p192HOOE
-  - E-Food:
+      href: https://noip.com/
+      icon: https://d2qr50rz2oof04.cloudfront.net/assets/img/logo/logo-white.png
+  - Portainer Templates:
     - abbr:
-      href: https://www.e-food.gr/
-      icon: https://play-lh.googleusercontent.com/AL3O4ziZLPk7DCBtKvwosWefQmDedPvR3VT3kMXo07hdAY70lqoIXa6Q_q3CnO_o7GU
-  - Amazon.de:
-    - abbr:
-      href: https://amazon.de/
-      icon: https://files.softicons.com/download/social-media-icons/simple-icons-by-dan-leech/png/256x256/amazon.png
+      href: https://portainer-templates.as93.net/
+      icon: portainer.png
 
 - Social:
   - LinkedIn:
@@ -110,31 +126,35 @@
       href: https://www.google.com/maps
       icon: google-maps.png
 
-- Work: 
-  - Paypal:
+- Entertainment:
+  - YouTube:
     - abbr:
-      href: https://www.paypal.com/
-      icon: https://cdn-icons-png.flaticon.com/512/2504/2504802.png
-  - Monday:
-    - abbr: 
-      href: https://monday.com
-      icon: https://marketing.wearedrew.co/hubfs/logomonday.com_.png?width=500&height=auto&name=image.png
-  - DuckDNS:
+      href: https://youtube.com/
+      icon: youtube.png
+  - Netflix:
     - abbr:
-      href: https://www.duckdns.org/
-      icon: https://c10.patreonusercontent.com/4/patreon-media/p/campaign/351251/f88f5d4bc3434344b925b9d62e4dcd49/eyJ3IjoxOTIwLCJ3ZSI6MX0%3D/1.png?token-time=1735948800&token-hash=hU5K48eoCUot7Od0iH4J1vHDqlYfXMt5IOTlIKP-IqI%3D
-  - NameCheap:
+      href: https://netflix.com
+      icon: netflix.png
+  - Y-Music:
     - abbr:
-      href: https://www.namecheap.com/
-      icon: https://static-00.iconduck.com/assets.00/namecheap-icon-2048x2048-ft2h6a21.png
-  - Udemy:
+      href: https://music.youtube.com/
+      icon: youtube-music.png
+  - Spotify:
     - abbr:
-      href: https://www.udemy.com
-      icon: udemy.png
-  - Proxmox helper scripts:
-    - abbr: 
-      href: https://community-scripts.github.io/ProxmoxVE/scripts
-      icon: https://community-scripts.github.io/ProxmoxVE/logo.png
+      href: https://open.spotify.com
+      icon: spotify.png
+  - Skroutz:
+    - abbr:
+      href: https://www.skroutz.gr/
+      icon: https://play-lh.googleusercontent.com/NINIMeezs4kFXbmKMoW3L2GYqC_kwBgho98V-t4Mr_PVQKCtXagrt04QIf26p192HOOE
+  - E-Food:
+    - abbr:
+      href: https://www.e-food.gr/
+      icon: https://play-lh.googleusercontent.com/AL3O4ziZLPk7DCBtKvwosWefQmDedPvR3VT3kMXo07hdAY70lqoIXa6Q_q3CnO_o7GU
+  - Amazon.de:
+    - abbr:
+      href: https://amazon.de/
+      icon: https://files.softicons.com/download/social-media-icons/simple-icons-by-dan-leech/png/256x256/amazon.png
       
 - Travelling:
   - Booking:

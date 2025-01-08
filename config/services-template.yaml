@@ -23,8 +23,8 @@
             password: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_PASSWORD}}
     - Home Lights:
         icon: mdi-led-on-#ffffff
-        description: 192.168.0.160
-        href: http://192.168.0.160/home
+        description: 192.168.0.161
+        href: http://192.168.0.161/home
     - NUC:
         icon: si-intel-#ffffff
         description: {{HOMEPAGE_VAR_NUC_PING}}
@@ -45,10 +45,10 @@
         icon: home-assistant-alt.svg
         siteMonitor: {{HOMEPAGE_VAR_HOMEASSISTANT_SITEMONITOR}}
         href: {{HOMEPAGE_VAR_HOMEASSISTANT_HREF}}
-        widget:
-            type: homeassistant
-            url: {{HOMEPAGE_VAR_HOMEASSISTANT_HREF}}
-            key: {{HOMEPAGE_VAR_HOMEASSISTANT_WIDGET_TOKEN}}
+        # widget:
+        #     type: homeassistant
+        #     url: {{HOMEPAGE_VAR_HOMEASSISTANT_HREF}}
+        #     key: {{HOMEPAGE_VAR_HOMEASSISTANT_WIDGET_TOKEN}}
             
 # ==============================================================================
 
@@ -162,7 +162,7 @@
         #         "insecure-registries":["desk-truenas.duckdns.org:30095"]
         #   c. sudo systemctl restart docker.service
         description: Via Truenas | Registry {{HOMEPAGE_VAR_REGISTRY_URL}}
-        icon: https://avatars.githubusercontent.com/u/78096003?v=4
+        icon: docker.png
         ping: {{HOMEPAGE_VAR_REGISTRY_PING}}
     - MeTube:
         href: {{HOMEPAGE_VAR_METUBE_HREF}}

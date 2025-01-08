@@ -8,7 +8,8 @@
 
 - datetime:
     locale: ath
-    href: https://vclock.com/
+    href: https://kimai.desk-portainer.duckdns.org/en/dashboard/
+    # href: https://vclock.com/
     format:
         dateStyle: long
         timeStyle: short

@@ -73,6 +73,15 @@
     - abbr:
       href: https://portainer-templates.as93.net/
       icon: portainer.png
+  - SVG Repo:
+    - abbr:
+      href: https://www.svgrepo.com/
+      icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWRpm6LAOaRU4_m7E-YAeBGjWAe3-OcM1gA&s
+  - DNS Checker:
+    - abbr:
+      href: https://dnschecker.org/#A/stemerot.com
+      icon: https://cdn6.aptoide.com/imgs/6/f/2/6f2d3c5a63d48ee6be8c229ca212271b_icon.png
+
 
 - Social:
   - LinkedIn:
@@ -125,6 +134,14 @@
     - abbr:
       href: https://www.google.com/maps
       icon: google-maps.png
+  - PageSpeed:
+    - abbr:
+      href: https://pagespeed.web.dev/
+      icon: https://logowiki.net/uploads/logo/g/google-pagespeed-insights.svg
+  - Google Analytics:
+    - abbr:
+      href: https://analytics.google.com/analytics/web/provision/#/provision
+      icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZZkFYRHz2S_zja-h5ryQAoCNHu0DB6FDGtg&s
 
 - Entertainment:
   - YouTube:

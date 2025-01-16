@@ -26,4 +26,13 @@ headerStyle: clean
 # Use _blank to open links in a new tab, _self to open links in the same tab, and _top to open links in a new window.
 # target: _self
 
+# layout:
+#   My Network:
+#     style: row
+#     columns: 1
+#   Home Mikrotik:
+#   Developer:
+#     iconsOnly: true
+#     style: row
+#     columns: 5
 

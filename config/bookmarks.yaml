@@ -57,18 +57,6 @@
     - abbr: 
       href: https://community-scripts.github.io/ProxmoxVE/scripts
       icon: https://community-scripts.github.io/ProxmoxVE/logo.png
-  - NameCheap:
-    - abbr:
-      href: https://www.namecheap.com/
-      icon: https://static-00.iconduck.com/assets.00/namecheap-icon-2048x2048-ft2h6a21.png
-  - DuckDNS:
-    - abbr:
-      href: https://www.duckdns.org/
-      icon: https://c10.patreonusercontent.com/4/patreon-media/p/campaign/351251/f88f5d4bc3434344b925b9d62e4dcd49/eyJ3IjoxOTIwLCJ3ZSI6MX0%3D/1.png?token-time=1735948800&token-hash=hU5K48eoCUot7Od0iH4J1vHDqlYfXMt5IOTlIKP-IqI%3D
-  - No-IP:
-    - abbr:
-      href: https://noip.com/
-      icon: https://d2qr50rz2oof04.cloudfront.net/assets/img/logo/logo-white.png
   - Portainer Templates:
     - abbr:
       href: https://portainer-templates.as93.net/
@@ -77,11 +65,28 @@
     - abbr:
       href: https://www.svgrepo.com/
       icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbWRpm6LAOaRU4_m7E-YAeBGjWAe3-OcM1gA&s
+
+- Web: 
+  - NameCheap:
+    - abbr:
+      href: https://www.namecheap.com/
+      icon: https://static-00.iconduck.com/assets.00/namecheap-icon-2048x2048-ft2h6a21.png
+  - DuckDNS:
+    - abbr:
+      href: https://www.duckdns.org/
+      icon: https://c10.patreonusercontent.com/4/patreon-media/p/campaign/351251/f88f5d4bc3434344b925b9d62e4dcd49/eyJ3IjoxOTIwLCJ3ZSI6MX0%3D/1.png?token-time=1735948800&token-hash=hU5K48eoCUot7Od0iH4J1vHDqlYfXMt5IOTlIKP-IqI%3D
+  - Dynu DNS:
+    - abbr:
+      href: https://www.dynu.com/en-US/
+      icon: https://www.dynu.com/content/images/logodynu.png
+  - No-IP:
+    - abbr:
+      href: https://noip.com/
+      icon: https://d2qr50rz2oof04.cloudfront.net/assets/img/logo/logo-white.png
   - DNS Checker:
     - abbr:
       href: https://dnschecker.org/#A/stemerot.com
       icon: https://cdn6.aptoide.com/imgs/6/f/2/6f2d3c5a63d48ee6be8c229ca212271b_icon.png
-
 
 - Social:
   - LinkedIn:

@@ -50,7 +50,15 @@
         #     type: homeassistant
         #     url: {{HOMEPAGE_VAR_HOMEASSISTANT_HREF}}
         #     key: {{HOMEPAGE_VAR_HOMEASSISTANT_WIDGET_TOKEN}}
-            
+    - Myspeed:
+        description: Speedtest statistics
+        icon: myspeed.png
+        ping: {{HOMEPAGE_VAR_MY_SPEED_WIDGET_URL}}
+        href: {{HOMEPAGE_VAR_MY_SPEED_WIDGET_URL}}
+        widget:
+            type: myspeed
+            url: {{HOMEPAGE_VAR_MY_SPEED_WIDGET_URL}}
+            password: {{HOMEPAGE_VAR_MY_SPEED_WIDGET_PASSWORD}} 
 # ==============================================================================
 
 - Homelab:
@@ -93,7 +101,7 @@
         siteMonitor: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_SITEMONITOR}}
         widget:
             type: npm
-            url: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_HREF}}
+            url: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_URL}}
             username: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_USERNAME}}
             password: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_PASSWORD}}  
     - Open WebUI:
@@ -110,6 +118,7 @@
         siteMonitor: {{HOMEPAGE_VAR_PHOTOPRISM_SITEMONITOR}}
         description: Via Truenas - {{HOMEPAGE_VAR_GITEA_IP}}
         widget:
+            # fields: ["albums", "photos", "videos"]
             type: photoprism
             url: {{HOMEPAGE_VAR_PHOTOPRISM_WIDGET_URL}}
             key: {{HOMEPAGE_VAR_PHOTOPRISM_WIDGET_TOKEN}}
@@ -123,6 +132,7 @@
         description: Via Truenas - {{HOMEPAGE_VAR_JELLYFIN_IP}}
         siteMonitor: {{HOMEPAGE_VAR_JELLYFIN_SITEMONITOR}}
         widget:
+            # fields: ["movies", "series", "episodes"]
             type: jellyfin
             url: {{HOMEPAGE_VAR_JELLYFIN_WIDGET_URL}}
             key: {{HOMEPAGE_VAR_JELLYFIN_WIDGET_KEY}}

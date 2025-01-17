@@ -83,6 +83,10 @@
     - abbr:
       href: https://noip.com/
       icon: https://d2qr50rz2oof04.cloudfront.net/assets/img/logo/logo-white.png
+  - Godaddy:
+    - abbr:
+      href: https://dashboard.godaddy.com
+      icon: https://static-00.iconduck.com/assets.00/godaddy-v2-icon-2048x2048-fnx09smt.png
   - DNS Checker:
     - abbr:
       href: https://dnschecker.org/#A/stemerot.com

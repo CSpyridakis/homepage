@@ -5,27 +5,27 @@
 # ==============================================================================
 - My Network:
     - Speedport:
-        description: ISP router - 192.168.1.1 
+        description: ISP router - {{HOMEPAGE_VAR_SPEEDPORT_IP}}
         icon: router.png
-        href: http://192.168.1.1
-        ping: 192.168.1.1
+        href: {{HOMEPAGE_VAR_SPEEDPORT_HREF}}
+        ping: {{HOMEPAGE_VAR_SPEEDPORT_IP}}
     - Home Mikrotik:
-        description: Home Gateway - 192.168.0.1
+        description: Home Gateway - {{HOMEPAGE_VAR_HOME_MIKROTIK_IP}}
         icon: mikrotik.png
-        ping: 192.168.0.1
+        ping: {{HOMEPAGE_VAR_HOME_MIKROTIK_IP}}
     - Desk Mikrotik:
-        description: Desk Gateway (Homelab) - 192.168.10.1
+        description: Desk Gateway (Homelab) - {{HOMEPAGE_VAR_HOMELAB_MIKROTIK_IP}}
         icon: mikrotik.png
-        ping: 192.168.10.1
+        ping: {{HOMEPAGE_VAR_HOMELAB_MIKROTIK_IP}}
         widget:
             type: mikrotik
-            url: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_URL}}
-            username: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_USERNAME}}
-            password: {{HOMEPAGE_VAR_MIKROTIK_WIDGET_PASSWORD}}
+            url: {{HOMEPAGE_VAR_HOMELAB_MIKROTIK_WIDGET_URL}}
+            username: {{HOMEPAGE_VAR_HOMELAB_MIKROTIK_WIDGET_USERNAME}}
+            password: {{HOMEPAGE_VAR_HOMELAB_MIKROTIK_WIDGET_PASSWORD}}
     - Home Lights:
         icon: mdi-led-on-#ffffff
-        description: 192.168.0.161
-        href: http://192.168.0.161/home
+        description: {{HOMEPAGE_VAR_HOME_LIGHTS_DESCRIPTION}}
+        href: {{HOMEPAGE_VAR_HOME_LIGHTS_HREF}}
     - NUC:
         icon: si-intel-#ffffff
         description: {{HOMEPAGE_VAR_NUC_PING}}
@@ -105,9 +105,9 @@
             username: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_USERNAME}}
             password: {{HOMEPAGE_VAR_NGINX_PROXY_MANAGER_WIDGET_PASSWORD}}  
     - Open WebUI:
-        href: https://open-webui.desk-portainer.duckdns.org/
+        href: {{HOMEPAGE_VAR_OPENWEBUI_HREF}}
         icon: open-webui.png
-        siteMonitor: https://open-webui.desk-portainer.duckdns.org/
+        siteMonitor: {{HOMEPAGE_VAR_OPENWEBUI_SITEMONITOR}}
         description: Via Proxmox
 # ==============================================================================
 

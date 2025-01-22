@@ -91,7 +91,7 @@
         ping: {{HOMEPAGE_VAR_PORTAINER_PING}}
         widget:
             type: portainer
-            url: {{HOMEPAGE_VAR_PORTAINER_HREF}}
+            url: {{HOMEPAGE_VAR_PORTAINER_WIDGET_URL}}
             env: 2
             key: {{HOMEPAGE_VAR_PORTAINER_WIDGET_KEY}}
     - Nginx-proxy-manager:
